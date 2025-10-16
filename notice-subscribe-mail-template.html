@@ -53,7 +53,7 @@
                     <p>
                       더 많은 빅테크 채용 공고를 보시려면
                       <a
-                        href="https://www.nklcb.kr"
+                        th:href="@{https://www.nklcb.kr}"
                         style="color: #007bff; text-decoration: underline"
                         ><strong>nklcb.kr</strong></a
                       >
@@ -111,17 +111,19 @@
                 >
                   <td style="padding: 16px; border-bottom: 1px solid #eee">
                     <a
-                      href="@{'https://www.nklcb.kr/community/detail/' + ${post.postId}}"
+                      th:href="@{'https://www.nklcb.kr/community/detail/' + ${post.postId}}"
                       style="
                         font-size: 16px;
                         font-weight: bold;
                         color: #222;
                         text-decoration: none;
                       "
+                      th:text="${post.title}"
                       >게시글 제목</a
                     >
                     <div
                       style="font-size: 14px; color: #666; margin-top: 4px"
+                      th:text="${post.author}"
                     >
                       작성자
                     </div>
